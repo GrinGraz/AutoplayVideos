@@ -102,6 +102,7 @@ public class AAH_CustomVideoView extends TextureView implements TextureView.Surf
                     mMediaPlayer.setDataSource(getContext(), mSource);
                     mMediaPlayer.setSurface(surface);
                     mMediaPlayer.prepare();
+                    muteVideo();
                     if (mMediaPlayer != null) mMediaPlayer.start();
                 } catch (IllegalArgumentException e) {
                     e.printStackTrace();
@@ -193,6 +194,7 @@ public class AAH_CustomVideoView extends TextureView implements TextureView.Surf
                 mMediaPlayer.setDataSource(getContext(), mSource);
                 mMediaPlayer.setSurface(surface);
                 mMediaPlayer.prepare();
+                muteVideo();
                 mMediaPlayer.start();
 
             } catch (IllegalArgumentException e) {
